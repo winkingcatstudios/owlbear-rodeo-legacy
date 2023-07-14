@@ -23,7 +23,7 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
-          username: deploy
+          username: winkingcat
           server: dungeonsanddaniels.ddns.net
           port: 6806 # default is 22
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
