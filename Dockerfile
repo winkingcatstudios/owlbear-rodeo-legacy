@@ -10,6 +10,9 @@ WORKDIR /home/node/app
 COPY --chown=node:node package.json ./
 COPY --chown=node:node yarn.lock ./
 
+USER root
+RUN apk add git
+
 USER node
 RUN yarn install --non-interactive --dev && yarn cache clean
 
